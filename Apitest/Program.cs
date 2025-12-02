@@ -13,38 +13,40 @@ namespace CopaPrimavera.ApiTest
             var httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri("https://localhost:7230/");
 
-            // TORNEOS
-            TestTorneos(httpClient);
+            //// TORNEOS
+            //TestTorneos(httpClient);
 
-            // EQUIPOS
-            TestEquipos(httpClient);
+            //// EQUIPOS
+            //TestEquipos(httpClient);
 
-            // JUGADORES
-            TestJugadores(httpClient);
+            //// JUGADORES
+            //TestJugadores(httpClient);
 
-            // PARTIDOS
-            TestPartidos(httpClient);
+            //// PARTIDOS
+            //TestPartidos(httpClient);
 
-            // GOLES
-            TestGoles(httpClient);
+            //// GOLES
+            //TestGoles(httpClient);
 
-            // TARJETAS
-            TestTarjetas(httpClient);
+            //// TARJETAS
+            //TestTarjetas(httpClient);
 
-            // GRUPOS
-            TestGrupos(httpClient);
+            //// GRUPOS
+            //TestGrupos(httpClient);
 
-            // ENCUENTROS LLAVE
-            TestEncuentrosLlave(httpClient);
+            //// ENCUENTROS LLAVE
+            //TestEncuentrosLlave(httpClient);
 
-            // ESTADISTICAS EQUIPO
-            TestEstadisticasEquipo(httpClient);
+            //// ESTADISTICAS EQUIPO
+            //TestEstadisticasEquipo(httpClient);
 
-            // ESTADISTICAS JUGADOR
-            TestEstadisticasJugador(httpClient);
+            //// ESTADISTICAS JUGADOR
+            //TestEstadisticasJugador(httpClient);
 
-            // SUSPENSIONES
-            TestSuspensiones(httpClient);
+            //// SUSPENSIONES
+            //TestSuspensiones(httpClient);
+
+            SimularTorneoCompleto(httpClient);
 
             Console.WriteLine("Pruebas finalizadas. Presiona Enter para salir.");
             Console.ReadLine();
@@ -295,7 +297,6 @@ namespace CopaPrimavera.ApiTest
             json = response.Content.ReadAsStringAsync().Result;
             var encuentroCreado = Newtonsoft.Json.JsonConvert.DeserializeObject<ApiResult<EncuentroLlave>>(json);
 
-            // Validación para evitar NullReferenceException
             if (encuentroCreado == null || encuentroCreado.Data == null)
             {
                 Console.WriteLine("Error: El API no devolvió datos válidos al crear el encuentro llave.");

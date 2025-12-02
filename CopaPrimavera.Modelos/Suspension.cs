@@ -10,19 +10,17 @@ namespace CopaPrimavera.Modelos
     public class Suspension
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public Guid JugadorId { get; set; }
+        public int JugadorId { get; set; }
         public Jugador Jugador { get; set; } = null!;
 
         [MaxLength(200)]
         public string Motivo { get; set; } = null!;
 
-        // Suspensión hasta partido concreto (si aplica)
-        public Guid? UntilPartidoId { get; set; }
+        public int? UntilPartidoId { get; set; }
 
-        // O hasta fecha
         public DateTime? UntilDate { get; set; }
 
         public DateTime CreadoEn { get; set; } = DateTime.UtcNow;

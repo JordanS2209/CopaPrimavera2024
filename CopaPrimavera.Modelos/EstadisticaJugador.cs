@@ -10,10 +10,11 @@ namespace CopaPrimavera.Modelos
     {
         public int Id { get; set; }
         public int JugadorId { get; set; }
-        public Jugador Jugador { get; set; } = null!;
 
         public int Goles { get; set; }
         public int TarjetasAmarillas { get; set; }
         public int TarjetasRojas { get; set; }
+
+        public Jugador? Jugador { get; set; }
     }
 }

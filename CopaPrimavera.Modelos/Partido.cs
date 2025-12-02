@@ -15,29 +15,16 @@ namespace CopaPrimavera.Modelos
         [Required]
         public int TorneoId { get; set; }
 
-        public RondaPartido Ronda { get; set; } = RondaPartido.Grupo;
+        public int GrupoId{ get; set; } 
 
-        [MaxLength(10)]
-        public string? NombreGrupo { get; set; } // "A", "B", ... si aplica
-
-        [Required]
         public int EquipoLocalId { get; set; }
-
-        [Required]
         public int EquipoVisitanteId { get; set; }
 
-        public DateTime ProgramadoParaUtc { get; set; }
+        public DateTime Programado { get; set; }
 
-        // Resultado (null si no jugado)
         public int? GolesLocal { get; set; }
         public int? GolesVisitante { get; set; }
-
-        public EstadoPartido Estado { get; set; } = EstadoPartido.Programado;
-
-        
-        
-
-        // Relaciones
+   
         public List<Gol> Goles { get; set; }
         public List<Tarjeta> Tarjetas { get; set; } 
     }

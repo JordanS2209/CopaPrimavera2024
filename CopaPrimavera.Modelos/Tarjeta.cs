@@ -10,18 +10,13 @@ namespace CopaPrimavera.Modelos
     public class Tarjeta
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        public Guid PartidoId { get; set; }
-        public Partido Partido { get; set; } = null!;
+        public int PartidoId { get; set; }
+        public Partido? Partido { get; set; } 
 
-        [Required]
-        public Guid JugadorId { get; set; }
-        public Jugador Jugador { get; set; } = null!;
-
-        [Required]
-        public TipoTarjeta Tipo { get; set; }
+        public int JugadorId { get; set; }
+        public Jugador? Jugador { get; set; } 
 
         public int Minuto { get; set; }
     }

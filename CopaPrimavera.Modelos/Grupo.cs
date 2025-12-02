@@ -12,17 +12,10 @@ namespace CopaPrimavera.Modelos
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public int TorneoId { get; set; }
 
-        [Required]
-        [MaxLength(10)]
-        public string Nombre { get; set; } = null!; // "A", "B", ...
+        public string Nombre { get; set; }
 
-        // Orden para generar fixture
-        public int Orden { get; set; }
-
-        // Equipos asignados al grupo
-        public List<Equipo>? Equipos { get; set; }
+ 
     }
 }

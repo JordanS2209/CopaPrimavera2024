@@ -12,6 +12,7 @@ namespace CopaPrimavera.Modelos
         [Key]
         public int Id { get; set; }
 
+        public string Tipo { get; set; } // "Amarilla" o "Roja"
         public int PartidoId { get; set; }
         public Partido? Partido { get; set; } 
 

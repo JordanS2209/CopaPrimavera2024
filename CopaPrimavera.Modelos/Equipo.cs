@@ -13,8 +13,14 @@ namespace CopaPrimavera.Modelos
 
         [Key]
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public int? JugadorId { get; set; }
-        public List<Jugador>? Jugadores { get; set; } 
+
+        public string Nombre { get; set; } = null!;
+
+        // FK al torneo donde está inscrito
+        public int TorneoId { get; set; }
+        public Torneo? Torneo { get; set; }
+
+        public List<Jugador>? Jugadores { get; set; }
+        public EstadisticaEquipo? Estadistica { get; set; }
     }
 }

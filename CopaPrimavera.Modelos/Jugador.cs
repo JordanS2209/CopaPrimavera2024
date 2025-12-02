@@ -12,12 +12,11 @@ namespace CopaPrimavera.Modelos
         [Key]
         public int Id { get; set; }
 
-        public int EquipoId { get; set; }
-
-        public int TorneoId { get; set; }
-
         public string Nombre { get; set; } = null!;
 
+        public int EquipoId { get; set; }
+        public Equipo? Equipo { get; set; }
+        public int TorneoId { get; set; }
 
         public int Goles { get; set; }
         public int TarjetasAmarillas { get; set; }

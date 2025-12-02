@@ -14,7 +14,7 @@ namespace CopaPrimavera.Modelos
 
         [Required]
         public int TorneoId { get; set; }
-        public Torneo Torneo { get; set; }
+        public Torneo? Torneo { get; set; }
 
 
        

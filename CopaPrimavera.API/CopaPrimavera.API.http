@@ -1,0 +1,6 @@
+@CopaPrimavera.API_HostAddress = http://localhost:5096
+
+GET {{CopaPrimavera.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

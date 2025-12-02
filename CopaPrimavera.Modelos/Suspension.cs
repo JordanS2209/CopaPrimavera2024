@@ -14,15 +14,14 @@ namespace CopaPrimavera.Modelos
 
         [Required]
         public int JugadorId { get; set; }
-        public Jugador Jugador { get; set; } = null!;
+        public Jugador? Jugador { get; set; }
 
-        [MaxLength(200)]
-        public string Motivo { get; set; } = null!;
+        public string Motivo { get; set; } 
 
         public int? UntilPartidoId { get; set; }
 
         public DateTime? UntilDate { get; set; }
 
-        public DateTime CreadoEn { get; set; } = DateTime.UtcNow;
+        public DateTime? CreadoEn { get; set; } = DateTime.UtcNow;
     }
 }
